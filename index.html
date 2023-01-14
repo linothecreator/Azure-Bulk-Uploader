@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ugly File Uploader</title>
+</head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
+<script src="https://cdn.socket.io/4.5.0/socket.io.min.js" integrity="sha384-7EyYLQZgWBi67fBtVxw60/OWl1kjsfrPFcaU0pp0nAh+i8FD068QogUvg85Ewy1k" crossorigin="anonymous"></script>   
+  
+<body>
+<!-- ======================================================================================= -->
+<nav><ul><li>
+<a href="https://ugly-file-uploader.linothecreator.repl.co/logout" id="logout-button">Logout</a></li></ul></nav>
+<!-- ======================================================================================= -->
+<div>
+<h1>Ugly File Uploader</h1>
+<p>This will upload to an azure database owned by Alternative Legends LLC.</p>
+<br>
+<p>This app will allow for bulk file uploads of type ".mp3" and ".wav".  </p>
+<br>
+<p>The uploaded files will be clickable once they are uploaded, utilizing web audio apis.</p>
+</div>
+<!-- ======================================================================================= -->
+<br>
+<div>
+<h2>Uploader:</h2>
+
+    <form id="form" action="/upload" method="post">    
+        <input type="text" id="fileName" name="fileName" value=""><br>
+       <input type="submit" id="formButton" style="display:none">       
+        </form>
+        <button id="selectButton">Select Files</button>
+        <button id="dummyButton" value="notnull">Done</button>
+
+    <input type="file" id="fileInput" name="fileInput" multiple style="display:none" >    
+    <div id="ab1" value="nofile selected"></div> 
+
+   <script>
+    var socket = io.connect('https://ugly-file-uploader.linothecreator.repl.co');
+    console.log("index.html <script>");
+    </script>    
+    </center>     
+    <script src="src/azure.ts" type="module"></script> 
+
+  
+</div>
+<!-- ======================================================================================= -->
+</body>
+</html>
